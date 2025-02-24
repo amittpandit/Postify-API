@@ -1,0 +1,38 @@
+server:
+  port: 8081
+  servlet:
+    context-path : /dev/api/${spring.application.name}
+
+spring:
+#  security:
+#    user:
+#      name: postify
+#      password: postify
+  redis:
+    host: localhost
+    port: 6379
+  application:
+    name: postify
+  datasource:
+    url: jdbc:mysql://localhost:3306/postify
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+  mail:
+    properties:
+      mail:
+        smtp:
+          starttls:
+            enable: true
+            required: true
+          auth: true
+    host: smtp.gmail.com
+    username: testinginfinte1@gmail.com
+    password: lmbp vrie uphp ahks
+    port : 587
